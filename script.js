@@ -243,7 +243,30 @@ function Promise_fun(a) {
 // let result = reg.test(letter);
 // console.log(result);
 //////escape-character\
-let reg = /Min\$/i;
-let letter = "min$";
+// let reg = /Min\$/i;
+// let letter = "min$";
+// let result = reg.test(letter);
+////// RegEx-2
+///// [ab]= a or b but not exist
+// let reg = /m[ab]in/i;
+// let letter = "mbin";
+// let result = reg.test(letter);
+/////^[ab] will start number with a or b but blank not accept
+// let reg = /^[ab]in/i;
+// let letter = "bain";
+// let result = reg.test(letter);
+/////[^ab] - can't start a or b and will accept other character.
+/////([h]ar){2}
+/////\w=any word character
+/////\W = non word character
+/////\d = digit number
+/////\D = Non Digit Number
+/////\s = space bar
+/////\S = Non Space Bar
+/////\b = boundary(no allow )
+///// /x(?=y)/ = will x follow y
+///// /x(?!y)/ = will x not follow y
+let reg = /x(?!y)/i;
+let letter = "xy";
 let result = reg.test(letter);
 console.log(result);
